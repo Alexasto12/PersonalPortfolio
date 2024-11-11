@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script> <!-- Lottie library per les animacions JSON -->
 </head>
 <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="./media/dark-background.mp4" type="video/mp4">
-    </video>
+    <div class="containerBody" id="background-lottie">
+        <!-- Contenedor para la animación Lottie -->
+        <div id="lottie-container"></div>
+    </div>
     <header>
         <nav>
             <ul>
@@ -24,7 +26,6 @@
             </ul>
         </nav>
     </header>
-    
     <script src="./js/FrontEndFunctions.js"></script>
 </body>
 </html>
