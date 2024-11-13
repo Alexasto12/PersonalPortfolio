@@ -22,7 +22,14 @@
                 <li><button class="button-nav" onclick="location.href='#about-me'">About Me</button></li>
                 <li><button class="button-nav" onclick="location.href='#projects'">Projects</button></li>
                 <li><button class="button-nav" onclick="location.href='#contact'">Contact</button></li>
-                <li><button id="toggleMode" class="button-nav" onclick="toggleStyleButton()">Toggle Mode</button></li>
+                <li>
+                    <div class="toggle-switch">
+                        <label class="switch-label">
+                            <input type="checkbox" class="checkbox" onclick="toggleStyleButton()">
+                            <span class="slider"></span>
+                        </label>
+                    </div>  
+                </li>
             </ul>
         </nav>
     </header>
