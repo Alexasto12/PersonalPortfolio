@@ -14,14 +14,19 @@ html{
 body {
     font-family: 'Roboto Flex', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     overflow: hidden; /* Assegura que no hi hagi scrollbars */
 }
 
 nav {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
     padding: 20px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 ul {
@@ -48,7 +53,7 @@ ul {
 
 /* Estils per a la versió clara */
 .light {
-    transition: all 0.8s allow-discrete;
+    transition: all 0.5s erase-out;
     background-image: linear-gradient(270deg, rgba(47,188,194,1) 6%, rgba(147,193,212,1) 32%, rgba(129,195,219,1) 66%, rgba(214,231,235,1) 100%);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -58,11 +63,11 @@ ul {
 
 .light .button-nav {
     border: 2px solid aquamarine;
-    background-color: rgb(3, 26, 21);
-    color: rgb(253, 253, 253);
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
     font-weight: 700;
-    transition: 0.8s;
-    box-shadow: 0px 0px 60px #a3f1f1;
+    transition: 0.5s;
+    box-shadow: 0px 0px 60px #02ff96;
     
 }
 
@@ -73,7 +78,7 @@ ul {
 
 /* Estils per a la versió fosca */
 .dark {
-    transition: all 0.8s allow-discrete;
+    transition: all 0.5s erase-out;
 
     background-image: linear-gradient(270deg, rgba(19,1,1,1) 13%, rgba(75,4,4,1) 49%, rgba(115,19,19,1) 92%, rgba(120,33,33,1) 100%);
     background-repeat: no-repeat;
@@ -86,7 +91,7 @@ ul {
     background-color: rgb(26, 14, 14);
     color: rgb(234, 234, 234);
     font-weight: 700;
-    transition: 0.1s;
+    transition: 0.5s;
     box-shadow: 0px 0px 60px #651f1f;
     
 }
@@ -193,16 +198,28 @@ ul {
 /* Estilos para la sección de tecnologías */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     padding: 20px;
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
 }
 
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.1);
+.light .grid-item {
+    transition: all 0.4s ease-in-out;
+    background-color: rgba(197, 196, 196, 0.39);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: flex-start; 
+}
+
+.dark .grid-item {
+    transition: all 0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.39);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: flex-start; 
 }
 
 .grid-item h2 {
@@ -210,14 +227,16 @@ ul {
 }
 
 .grid-item ul {
+    
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
 }
 
 .grid-item ul li {
-    margin: 5px 0;
+    margin: 0;
     display: flex;
-    align-items: center;
+ /* Alinea los elementos al principio del div */
 }
 
 .grid-item ul li img {
@@ -225,3 +244,61 @@ ul {
     height: 24px;
     margin-right: 10px;
 }
+
+/* From Uiverse.io by akshat-patel28 */ 
+.light .card {
+    transition: all 0.5s erase-out;
+    width: 15em;
+    
+    background: rgb(14, 192, 183);
+    border-radius: 15px;
+    box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(17, 216, 223));
+    cursor: pointer;
+    
+    overflow: hidden;
+  }
+  .dark .card {
+   transition: all 0.5s erase-out;
+    width: 15em;
+    
+    background: rgb(14, 192, 183);
+    border-radius: 15px;
+    box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to right, rgb(136, 44, 1), rgb(95, 13, 2));
+    cursor: pointer;
+    
+    overflow: hidden;
+  }
+  .card:hover {
+    box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+  }
+  
+  .time-text {
+    font-size: 50px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .time-sub-text {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  
+  .day-text {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
