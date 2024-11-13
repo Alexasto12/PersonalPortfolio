@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark"> <!-- La idea es fer un botó que canviï la classe -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Cabrera Carrasco | Web Developer </title>
+    <title>Alejandro Cabrera Carrasco | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script> <!-- Lottie library per les animacions JSON -->
 </head>
 <body>
-    
+    <div class="containerBody" id="background-lottie">
+        <!-- Contenedor para la animación Lottie -->
+        <div id="lottie-container"></div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><button class="button-nav" onclick="location.href='#home'">Home</button></li>
+                <li><button class="button-nav" onclick="location.href='#about-me'">About Me</button></li>
+                <li><button class="button-nav" onclick="location.href='#projects'">Projects</button></li>
+                <li><button class="button-nav" onclick="location.href='#contact'">Contact</button></li>
+                <li>
+                    <div class="toggle-switch">
+                        <label class="switch-label">
+                            <input type="checkbox" class="checkbox" onclick="toggleStyleButton()">
+                            <span class="slider"></span>
+                        </label>
+                    </div>  
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script src="./js/FrontEndFunctions.js"></script>
 </body>
 </html>

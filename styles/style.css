@@ -1,0 +1,192 @@
+/* Aplicar la font a tot el document */
+html{
+    min-height: 100%;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Assegura que el vídeo estigui darrere de tot el contingut */
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Assegura que no hi hagi scrollbars */
+}
+
+nav {
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.button-nav:active {
+    scale: 0.90;
+}
+
+.button-nav {
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /* Assegura que la mida del border és la del botó */
+}
+
+/* Estils per a la versió clara */
+.light {
+    transition: all 0.8s allow-discrete;
+    background-image: linear-gradient(270deg, rgba(47,188,194,1) 6%, rgba(147,193,212,1) 32%, rgba(129,195,219,1) 66%, rgba(214,231,235,1) 100%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #2b2b2bd5;
+}
+
+.light .button-nav {
+    border: 2px solid aquamarine;
+    background-color: rgb(3, 26, 21);
+    color: rgb(253, 253, 253);
+    font-weight: 700;
+    transition: 0.8s;
+    box-shadow: 0px 0px 60px #a3f1f1;
+    
+}
+
+.light .button-nav:hover {
+    background: linear-gradient(2deg, rgba(56, 224, 213, 0.904) 0%, rgba(175, 232, 236, 0.849) 60%);
+    color: rgb(0, 0, 0);
+}
+
+/* Estils per a la versió fosca */
+.dark {
+    transition: all 0.8s allow-discrete;
+
+    background-image: linear-gradient(270deg, rgba(19,1,1,1) 13%, rgba(75,4,4,1) 49%, rgba(115,19,19,1) 92%, rgba(120,33,33,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.dark .button-nav {
+    border: 2px solid rgb(163, 0, 0);
+    background-color: rgb(26, 14, 14);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.1s;
+    box-shadow: 0px 0px 60px #651f1f;
+    
+}
+
+.dark .button-nav:hover {
+    background: linear-gradient(2deg, rgba(78, 2, 2, 0.681) 0%, rgba(232, 31, 31, 0.873) 60%);
+    color: rgb(255, 255, 255);
+    
+}
+
+#background-lottie {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500vh;
+    z-index: -1; /* Fa que el fons estigui darrere del contingut */
+    pointer-events: none; /* Permet que els clics passin al contingut */
+}
+
+#lottie-container {
+    width: 100%;
+    height: 300%;
+    position: fixed;
+    top: -70%;
+    left: 0;
+    z-index: -1; /* Assegura que l'animació estigui darrere de tot el contingut */
+    pointer-events: none; /* Permet que els clics passin al contingut */
+}
+
+/* Estil d'exemple per al contingut */
+.containerBody .content {
+    position: relative;
+    z-index: 1; /* Assegura que estigui a sobre de l'animació */
+    color: white;
+    text-align: center;
+    padding-top: 20vh;
+    font-size: 2rem;
+}
+
+/* From Uiverse.io by Madflows */ 
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 75%;
+    --light: rgb(5, 250, 197);
+    --dark: rgb(161, 17, 17);
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+  
+  .switch-label {
+    position: absolute;
+    width: 80%;
+    height: 130%;
+    background-image: linear-gradient(250deg, var(--light), var(--dark));
+    border-radius: 25px;
+    cursor: pointer;
+    
+  }
+  
+  .checkbox {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.3s;
+    transition: 0.6s;
+  }
+  
+  .checkbox:checked ~ .slider {
+    background-image: linear-gradient(250deg, var(--light), var(--dark));
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--dark);
+    box-shadow: inset 12px -4px 0px 0px var(--light);
+    -webkit-transition: 0.3s;
+    transition: 0.6s;
+    
+  }
+  
+  .checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(35px);
+    background-image: linear-gradient(90deg, var(--light) , var(--dark));
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
