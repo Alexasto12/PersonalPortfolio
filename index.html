@@ -1,103 +1,161 @@
 <!DOCTYPE html>
-<html lang="en" class="dark"> <!-- La idea es fer un botó que canviï la classe -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Cabrera Carrasco | Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script> <!-- Lottie library per les animacions JSON -->
-</head>
-<body>
-    <div class="containerBody" id="background-lottie">
-        <!-- Contenedor para la animación Lottie -->
-        <div id="lottie-container"></div>
-    </div>
-    <header>
-<div class="card">
-<p class="time-text">11:11</p>
-<p class="day-text">Wednesday, June 15th</p>
-</div>
-        <nav>
-            <ul>
-                <li><button class="button-nav" onclick="location.href='./index.html'">Home</button></li>
-                <li><button class="button-nav" onclick="location.href='#about-me'">About Me</button></li>
-                <li><button class="button-nav" onclick="location.href='#projects'">Projects</button></li>
-                <li><button class="button-nav" onclick="location.href='#contact'">Contact</button></li>
-                <li>
-                    <div class="toggle-switch">
-                        <label class="switch-label">
-                            <input type="checkbox" class="checkbox" onclick="toggleStyleButton()">
-                            <span class="slider"></span>
-                        </label>
-                    </div>  
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is the home section.</p>
-        </section>
-        <section id="about-me">
-            <h1>About Me</h1>
-            <p>This is the about me section.</p>
-        </section>
-        <section id="projects">
-            <h1>Projects</h1>
-            <p>This is the projects section.</p>
-        </section>
-        <section id="technologies">
-            <h1>Technologies I Know</h1>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <h2>Markup Languages</h2>
-                    <ul>
-                        <li><img src="./media/Icons/html5.svg" alt="HTML Icon"> HTML</li>
-                        <li><img src="./media/Icons/css.svg" alt="CSS Icon"> CSS</li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <h2>Frameworks</h2>
-                    <ul>
-                        <li><img src="./media/Icons/laravel.svg" alt="Laravel Icon"> Laravel</li>
-                        <li><img src="./media/Icons/Bootstrap.png" alt="Bootstrap Icon"> Bootstrap</li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <h2>Programming Languages</h2>
-                    <ul>
-                        <li><img src="./media/Icons/python.svg" alt="Python Icon"> Python</li>
-                        <li><img src="./media/Icons/java.svg" alt="Java Icon"> Java</li>
-                        <li><img src="./media/Icons/javascript.svg" alt="JavaScript Icon"> JavaScript</li>
-                        <li><img src="./media/Icons/phpdark.svg" alt="PHP Icon"> PHP</li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <h2>IDEs</h2>
-                    <ul>
-                        <li><img src="./media/Icons/apache.svg" alt="NetBeans Icon"> NetBeans</li>
-                        <li><img src="./media/Icons/vscode.svg" alt="VSCode Icon"> VSCode</li>
-                        <li><img src="./media/Icons/pycharm.svg" alt="PyCharm Icon"> PyCharm</li>
-                    </ul>
-                </div>
-                <div class="grid-item">
-                    <h2>Databases</h2>
-                    <ul>
-                        <li><img src="./media/Icons/mysql.svg" alt="MySQL Icon"> MySQL</li>
-                        <li><img src="./media/Icons/mongodb.svg" alt="MongoDB Icon"> MongoDB</li>
-                    </ul>
-                </div>
+<html lang="en" class="dark">
+    <!-- La idea es fer un botó que canviï la classe -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alejandro Cabrera Carrasco | Web Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./styles/style.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+        <!-- Lottie library per les animacions JSON -->
+    </head>
+    <body>
+        <div class="containerBody" id="background-lottie">
+            <!-- Contenedor para la animación Lottie -->
+            <div id="lottie-container"></div>
+        </div>
+        <header>
+            <div class="card">
+                <p>
+                    <span class="author-signature">Alejandro Cabrera
+                        Carrasco</span>
+                    <span class="day-text">Wednesday, June 15th</span>
+                    <span class="time-text">11:11</span>
+                </p>
             </div>
-        </section>
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>This is the contact section.</p>
-        </section>
-    </main>
-    <script src="./js/FrontEndFunctions.js"></script>
-</body>
+            <nav>
+                <ul>
+                    <li><button class="button-nav"
+                            onclick="location.href='./index.html'">Home</button></li>
+                    <li><button class="button-nav"
+                            onclick="location.href='#about-me'">About
+                            Me</button></li>
+                    <li><button class="button-nav"
+                            onclick="location.href='#projects'">Projects</button></li>
+                    <li><button class="button-nav"
+                            onclick="location.href='#contact'">Contact</button></li>
+                    <li>
+                        <div class="toggle-switch">
+                            <label class="switch-label">
+                                <input type="checkbox" class="checkbox"
+                                    onclick="toggleStyleButton()">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="about-me" onmouseleave="showElement('grid-container')">
+                <article class="cardAboutMe">
+                    <div class="temporary_text">
+                    </div>
+                <div class="card_content">
+                    <span class="card_title"></span>
+                        <span class="card_subtitle">Web developer and IT Technician</span>
+                        <p class="card_description"> 
+                            Hello! I'm Alejandro Cabrera Carrasco, a web developer passionate about crafting seamless and engaging digital experiences. With a solid foundation in programming and a love for solving complex challenges, I bring creativity and dedication to every project I undertake.  
+                            
+                            My journey into technology began at a young age, and it has since evolved into a fulfilling pursuit of excellence in the field of web development. Currently, I’m enhancing my skills through specialized training while gaining practical experience through hands-on projects and internships.  
+                            
+                            I’m driven by the desire to continuously grow, adapt, and contribute to impactful projects that make a difference. Let’s collaborate and build something extraordinary!
+                            <h1>Technologies I Know</h1>
+            
+                            <label class="container-tech">
+                                <input checked="checked" type="checkbox" onclick="showElement('grid-container')">
+                                <svg viewBox="0 0 512 512" height="1em"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="chevron-down"><path
+                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg>
+                            </label>
+                            <div class="grid-container">
+                                <div class="grid-item">
+                                    <h2>Markup Languages</h2>
+                                    <ul>
+                                        <li><img src="./media/Icons/html5.svg"
+                                                alt="HTML Icon"> HTML</li>
+                                        <li><img src="./media/Icons/css.svg" alt="CSS Icon">
+                                            CSS</li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <h2>Frameworks</h2>
+                                    <ul>
+                                        <li><img src="./media/Icons/laravel.svg"
+                                                alt="Laravel Icon"> Laravel</li>
+                                        <li><img src="./media/Icons/Bootstrap.png"
+                                                alt="Bootstrap Icon"> Bootstrap</li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <h2>Programming Languages</h2>
+                                    <ul>
+                                        <li><img src="./media/Icons/python.svg"
+                                                alt="Python Icon"> Python</li>
+                                        <li><img src="./media/Icons/java.svg"
+                                                alt="Java Icon"> Java</li>
+                                        <li><img src="./media/Icons/javascript.svg"
+                                                alt="JavaScript Icon"> JavaScript</li>
+                                        <li><img src="./media/Icons/phpdark.svg"
+                                                alt="PHP Icon"> PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <h2>IDEs</h2>
+                                    <ul>
+                                        <li><img src="./media/Icons/apache.svg"
+                                                alt="NetBeans Icon"> NetBeans</li>
+                                        <li><img src="./media/Icons/vscode.svg"
+                                                alt="VSCode Icon"> VSCode</li>
+                                        <li><img src="./media/Icons/pycharm.svg"
+                                                alt="PyCharm Icon"> PyCharm</li>
+                                    </ul>
+                                </div>
+                                <div class="grid-item">
+                                    <h2>Databases</h2>
+                                    <ul>
+                                        <li><img src="./media/Icons/mysql.svg"
+                                                alt="MySQL Icon"> MySQL</li>
+                                        <li><img src="./media/Icons/mongodb.svg"
+                                                alt="MongoDB Icon"> MongoDB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>      
+                </div>
+                </article>
+                
+            </section>
+            <section id="projects">
+                <h1>Projects</h1>
+                <p>This is the projects section.</p>
+            </section>
+            
+            <section id="contact">
+                <h1>Contact</h1>
+                <p>This is the contact section.</p>
+            </section>
+        </main>
+        <script src="./js/FrontEndFunctions.js"></script>
+        <div class="nav-screen">
+            <i class="fa fa-times fa-3x"></i>
+            <div class="nav-container">
+              <div class="nav-links">
+                <ul id='myMenu'>
+                  <li data-menuanchor="homePage"><a href="#home">•</a></li>
+                  <li data-menuanchor="aboutPage"><a href="#about-me">•</a></li>
+                  <li data-menuanchor="projectsPage"><a href="#projects">•</a></li>
+                  <li data-menuanchor="contactPage"><a href="#contact">•</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </body>
 </html>

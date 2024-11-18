@@ -47,14 +47,47 @@ function lottieAnimation(path) {
  */
 document.addEventListener('DOMContentLoaded', (event) => { // Quan la pàgina s'ha carregat
     if (document.documentElement.classList.contains('light')) {
-        lottieAnimation('./media/JSON/Light-Background.json'); // Carrega l'animació per al mode clar si la pàgina s'ha carregat en mode clar
+        lottieAnimation('./media/JSON/Light-Background.json');
     } else {
-        lottieAnimation('./media/JSON/Dark-Background.json'); // Carrega l'animació per al mode fosc si la pàgina s'ha carregat en mode fosc 
+        lottieAnimation('./media/JSON/Dark-Background.json');
     }
 });
 window.onload = function() {
     setInterval(() => {
-        document.getElementsByClassName('time-text')[0].innerHTML = new Date().toLocaleTimeString().substring(0,5) // Mostra l'hora actual
-    }, 1000); // Mostra l'hora actual
-document.getElementsByClassName('day-text')[0].innerHTML = new Date().toDayString(); // Mostra la data actual
+        document.getElementsByClassName('time-text')[0].innerHTML = new Date().toLocaleTimeString().substring(0,5)
+    }, 1000);
+document.getElementsByClassName('day-text')[0].innerHTML = new Date().toLocaleDateString();
 }
+
+function showElement(className) {
+    var div = document.getElementsByClassName(className)[0];
+    var val = div.style.display;
+    
+    if (val === "none") {
+        div.style.display = "grid";
+        div.style.opacity = "0";
+        setTimeout(() => {
+            div.style.transition = "opacity 0.5s ease-in";
+            div.style.opacity = "1";
+        }, 300);
+    } else {
+        div.style.transition = "opacity 0.5s ease";
+        div.style.transitionDelay = ".25s";
+        div.style.opacity = "0";
+        setTimeout(() => {
+            div.style.display = "none";
+        }, 300);
+    }
+
+    return false;
+}
+
+function toggleNav() {
+    var navScreen = document.querySelector('.nav-screen');
+    if (navScreen.style.width === '0px' || navScreen.style.width === '') {
+        navScreen.style.width = '250px';
+    } else {
+        navScreen.style.width = '0';
+    }
+}
+

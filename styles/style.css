@@ -1,304 +1,561 @@
 /* Aplicar la font a tot el document */
-html{
-    min-height: 100%;
+html {
+  height: fit-content;
+  font-family: 'Roboto Flex', sans-serif;
+  scroll-behavior: smooth;
 }
+
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1; /* Assegura que el vídeo estigui darrere de tot el contingut */
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  /* Assegura que el vídeo estigui darrere de tot el contingut */
 }
 
 body {
-    font-family: 'Roboto Flex', sans-serif;
-    margin: 0;
-    padding: 10px;
-    overflow: hidden; /* Assegura que no hi hagi scrollbars */
+  height: fit-content;
+  font-family: 'Roboto Flex', sans-serif;
+  margin: 0;
+  padding: 30px;
+
+}
+
+header {
+  margin-bottom: 101vh;
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 20px;
-    margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  margin: 0;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 .button-nav:active {
-    scale: 0.90;
+  scale: 0.90;
 }
 
 .button-nav {
-    border-radius: 15px;
-    cursor: pointer;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    /* Assegura que la mida del border és la del botó */
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  /* Assegura que la mida del border és la del botó */
 }
 
 /* Estils per a la versió clara */
 .light {
-    transition: all 0.5s erase-out;
-    background-image: linear-gradient(270deg, rgba(47,188,194,1) 6%, rgba(147,193,212,1) 32%, rgba(129,195,219,1) 66%, rgba(214,231,235,1) 100%);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #2b2b2bd5;
+  transition: all 0.5s erase-out;
+  background-image: linear-gradient(270deg, rgba(47, 188, 194, 1) 6%, rgba(147, 193, 212, 1) 32%, rgba(129, 195, 219, 1) 66%, rgba(214, 231, 235, 1) 100%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #2b2b2bd5;
 }
 
 .light .button-nav {
-    border: 2px solid aquamarine;
-    background-color: aquamarine;
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    transition: 0.5s;
-    box-shadow: 0px 0px 60px #02ff96;
-    
+  border: 2px solid aquamarine;
+  background-color: aquamarine;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  transition: 0.5s;
+  box-shadow: 0px 0px 60px #02ff96;
+
 }
 
 .light .button-nav:hover {
-    background: linear-gradient(2deg, rgba(56, 224, 213, 0.904) 0%, rgba(175, 232, 236, 0.849) 60%);
-    color: rgb(0, 0, 0);
+  background: linear-gradient(2deg, rgba(56, 224, 213, 0.904) 0%, rgba(175, 232, 236, 0.849) 60%);
+  color: rgb(0, 0, 0);
 }
 
 /* Estils per a la versió fosca */
 .dark {
-    transition: all 0.5s erase-out;
+  transition: all 0.5s erase-out;
 
-    background-image: linear-gradient(270deg, rgba(19,1,1,1) 13%, rgba(75,4,4,1) 49%, rgba(115,19,19,1) 92%, rgba(120,33,33,1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+  background-image: linear-gradient(270deg, rgba(19, 1, 1, 1) 19%, rgba(45, 1, 1, 1) 62%, rgba(125, 0, 0, 1) 78%, rgba(147, 0, 0, 1) 90%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
 .dark .button-nav {
-    border: 2px solid rgb(163, 0, 0);
-    background-color: rgb(26, 14, 14);
-    color: rgb(234, 234, 234);
-    font-weight: 700;
-    transition: 0.5s;
-    box-shadow: 0px 0px 60px #651f1f;
-    
+  border: 2px solid rgb(163, 0, 0);
+  background-color: rgb(26, 14, 14);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.5s;
+  box-shadow: 0px 0px 60px #651f1f;
+
 }
 
 .dark .button-nav:hover {
-    background: linear-gradient(2deg, rgba(78, 2, 2, 0.681) 0%, rgba(232, 31, 31, 0.873) 60%);
-    color: rgb(255, 255, 255);
-    
+  background: linear-gradient(2deg, rgba(78, 2, 2, 0.681) 0%, rgba(232, 31, 31, 0.873) 60%);
+  color: rgb(255, 255, 255);
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
 }
 
 #background-lottie {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 500vh;
-    z-index: -1; /* Fa que el fons estigui darrere del contingut */
-    pointer-events: none; /* Permet que els clics passin al contingut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500vh;
+  z-index: -1;
+  /* Fa que el fons estigui darrere del contingut */
+  pointer-events: none;
+  /* Permet que els clics passin al contingut */
 }
 
 #lottie-container {
-    width: 100%;
-    height: 300%;
-    position: fixed;
-    top: -70%;
-    left: 0;
-    z-index: -1; /* Assegura que l'animació estigui darrere de tot el contingut */
-    pointer-events: none; /* Permet que els clics passin al contingut */
+  width: 100%;
+  height: 300%;
+  position: fixed;
+  top: -70%;
+  left: 0;
+  z-index: -1;
+  /* Assegura que l'animació estigui darrere de tot el contingut */
+  pointer-events: none;
+  /* Permet que els clics passin al contingut */
 }
 
 /* Estil d'exemple per al contingut */
 .containerBody .content {
-    position: relative;
-    z-index: 1; /* Assegura que estigui a sobre de l'animació */
-    color: white;
-    text-align: center;
-    padding-top: 20vh;
-    font-size: 2rem;
+  position: relative;
+  z-index: 1;
+  /* Assegura que estigui a sobre de l'animació */
+  color: white;
+  text-align: center;
+  padding-top: 20vh;
+  font-size: 2rem;
 }
 
-/* From Uiverse.io by Madflows */ 
+/* From Uiverse.io by Madflows */
 .toggle-switch {
-    position: relative;
-    width: 100px;
-    height: 75%;
-    --light: rgb(5, 250, 197);
-    --dark: rgb(161, 17, 17);
-    --link: rgb(27, 129, 112);
-    --link-hover: rgb(24, 94, 82);
-  }
-  
-  .switch-label {
-    position: absolute;
-    width: 80%;
-    height: 130%;
-    background-image: linear-gradient(250deg, var(--light), var(--dark));
-    border-radius: 25px;
-    cursor: pointer;
-    
-  }
-  
-  .checkbox {
-    position: absolute;
-    display: none;
-  }
-  
-  .slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    -webkit-transition: 0.3s;
-    transition: 0.6s;
-  }
-  
-  .checkbox:checked ~ .slider {
-    background-image: linear-gradient(250deg, var(--light), var(--dark));
-  }
-  
-  .slider::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    -webkit-box-shadow: inset 12px -4px 0px 0px var(--dark);
-    box-shadow: inset 12px -4px 0px 0px var(--light);
-    -webkit-transition: 0.3s;
-    transition: 0.6s;
-    
-  }
-  
-  .checkbox:checked ~ .slider::before {
-    -webkit-transform: translateX(50px);
-    -ms-transform: translateX(50px);
-    transform: translateX(35px);
-    background-image: linear-gradient(90deg, var(--light) , var(--dark));
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
+  position: relative;
+  width: 100px;
+  height: 75%;
+  --light: rgb(5, 250, 197);
+  --dark: rgb(161, 17, 17);
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 80%;
+  height: 130%;
+  background-image: linear-gradient(250deg, var(--light), var(--dark));
+  border-radius: 25px;
+  cursor: pointer;
+
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.6s;
+}
+
+.checkbox:checked~.slider {
+  background-image: linear-gradient(250deg, var(--light), var(--dark));
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--dark);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  -webkit-transition: 0.3s;
+  transition: 0.6s;
+
+}
+
+.checkbox:checked~.slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(35px);
+  background-image: linear-gradient(90deg, var(--light), var(--dark));
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 /* Estilos para la sección de tecnologías */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 2fr));
+  gap: 10px;
+  padding: 20px;
+  margin: 0;
+  /* Asegúrate de que no haya márgenes adicionales */
 }
 
 .light .grid-item {
-    transition: all 0.4s ease-in-out;
-    background-color: rgba(197, 196, 196, 0.39);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    align-items: flex-start; 
+  display: flex;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(197, 196, 196, 0.39);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .dark .grid-item {
-    transition: all 0.4s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.39);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    align-items: flex-start; 
+  display: flex;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.39);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .grid-item h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .grid-item ul {
-    
-    list-style-type: none;
-    padding: 0;
-    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  /* Asegúrate de que no haya márgenes adicionales */
 }
 
 .grid-item ul li {
-    margin: 0;
-    display: flex;
- /* Alinea los elementos al principio del div */
+  background-color: #ff020211;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.932);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /* Alinea los elementos al principio del div */
+}
+
+.grid-item ul li:hover {
+  transition: all 0.2s ease-out;
+  transform: scale(1.1);
 }
 
 .grid-item ul li img {
-    width: 24px; /* Ajusta el tamaño de las imágenes según sea necesario */
-    height: 24px;
-    margin-right: 10px;
+  width: 5em;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: 5em;
+  margin-right: 10px;
+  margin-left: 20px;
 }
 
-/* From Uiverse.io by akshat-patel28 */ 
+/* From Uiverse.io by akshat-patel28 */
 .light .card {
-    transition: all 0.5s erase-out;
-    width: 15em;
-    
-    background: rgb(14, 192, 183);
-    border-radius: 15px;
-    box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
-    display: flex;
-    color: rgb(0, 0, 0);
-    justify-content: center;
-    flex-direction: column;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(17, 216, 223));
-    cursor: pointer;
-    
-    overflow: hidden;
+  transition: all 0.5s erase-out;
+  width: 15em;
+
+  background: rgb(14, 192, 183);
+  border-radius: 15px;
+  box-shadow: rgb(0, 0, 0, 0.7) 5px 10px 50px, rgb(0, 0, 0, 0.7) -5px 0px 250px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(17, 216, 223));
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.dark .card {
+  transition: all 0.5s erase-out;
+  width: 15em;
+
+  background: rgb(14, 192, 183);
+  border-radius: 15px;
+  box-shadow: rgb(0, 0, 0, 0.7) 5px 10px 50px, rgb(0, 0, 0, 0.7) -5px 0px 250px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(136, 44, 1), rgb(95, 13, 2));
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: rgb(0, 0, 0) 5px 10px 50px, rgb(0, 0, 0) -5px 0px 250px;
+}
+
+.time-text {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.time-sub-text {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.author-signature {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.day-text {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*------ Settings ------*/
+.container-tech {
+  --color: #a5a5b0;
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.container-tech .chevron-down {
+  position: absolute;
+  animation: keyframes-return .5s;
+}
+
+/* ------ On check event ------ */
+.container-tech input:checked~.chevron-down {
+  animation: keyframes-rotate .5s;
+  transform: rotate(180deg);
+}
+
+/* ------ Hide the default checkbox ------ */
+.container-tech input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
   }
-  .dark .card {
-   transition: all 0.5s erase-out;
-    width: 15em;
-    
-    background: rgb(14, 192, 183);
-    border-radius: 15px;
-    box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
-    display: flex;
-    color: rgb(255, 255, 255);
-    justify-content: center;
-    flex-direction: column;
-    background: linear-gradient(to right, rgb(136, 44, 1), rgb(95, 13, 2));
-    cursor: pointer;
-    
-    overflow: hidden;
+
+  100% {
+    transform: rotate(-180deg);
   }
-  .card:hover {
-    box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+}
+
+@keyframes keyframes-return {
+  0% {
+    transform: rotate(-180deg);
+    opacity: 0;
   }
-  
-  .time-text {
-    font-size: 50px;
-    margin-top: 0px;
-    margin-left: 15px;
-    font-weight: 600;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  100% {
+    transform: rotate(0deg);
   }
-  
-  .time-sub-text {
-    font-size: 15px;
-    margin-left: 5px;
-  }
-  
-  .day-text {
-    font-size: 18px;
-    margin-top: 0px;
-    margin-left: 15px;
-    font-weight: 500;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+}
+
+/* Estilos generales para la barra de desplazamiento */
+::-webkit-scrollbar {
+  display: none;
+  /* Altura de la barra de desplazamiento horizontal */
+}
+
+/* Estilos para la pista de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: none;
+  /* Color de fondo de la pista */
+
+}
+
+
+/* Estilos para el menú lateral con puntos */
+.nav-screen {
+  height: 100vh;
+  /* Full viewport height */
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Added to center vertically */
+  padding-top: 0;
+  /* Removed padding-top */
+}
+
+.nav-container {
+  height: auto;
+  display: flex;
+  /* Added to help with centering */
+  align-items: center;
+  /* Added to center content */
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Added to center items */
+  gap: 30px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.nav-links ul li {
+  text-align: center;
+}
+
+.nav-links ul li a {
+  color: rgb(228, 36, 36);
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 2s;
+  display: block;
+}
+
+.nav-links ul li a:hover {
+  transform: scale(1.2);
+  color: #f1f1f1;
+}
+
+.cardAboutMe {
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  color: #ffffff;
+  overflow: hidden;
+  border-radius: 20px;
+
+}
+
+.card_title {
+  font-weight: bold;
+}
+
+
+.temporary_text {
+  font-size: xx-large;
+  color: #fff;
+}
+
+.card_content {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  left: 0;
+  bottom: 0;
+  /* edit the width to fit card */
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+
+  border-radius: 20px;
+  /* edit here to change the height of the content box */
+  transform: translateY(250px);
+  transition: transform .25s;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: fit-content;
+  overflow: visible;
+  min-height: 110vh;
+}
+
+
+.card_subtitle {
+  display: block;
+  font-size: 120px;
+  margin-bottom: 10px;
+}
+
+.card_description {
+  display: flex;
+  margin: 0 auto;
+  width: 85%;
+  background-color: #25252515;
+  box-shadow: #0000004d 0px 10px 20px;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.cardAboutMe:hover .card_content {
+  transform: translateY(100px);
+}
+
+.cardAboutMe:hover .card_description {
+  opacity: 1;
+  transition-delay: .25s;
+}
