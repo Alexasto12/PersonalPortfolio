@@ -34,7 +34,7 @@ PersonalPortfolio/
 │   ├── script.js     # Main interactivity
 ├── images/           # Images and icons
 └── README.md         # Documentation (you're reading it!)
-
+```
 ## 🚀 How to Use Locally  
 If you'd like to view or edit this project locally, follow these steps:  
 
@@ -47,13 +47,10 @@ Navigate to the folder and open the index.html file in your browser.
 Customize:
 Modify the files as needed to make it your own.
 
-yaml
-Copiar código
-
 ---
 
 ### **Contributing y Contacto**  
-```markdown
+
 ## 🤝 Contributing  
 Feedback is welcome! If you have suggestions or want to contribute:  
 
@@ -63,21 +60,25 @@ Feedback is welcome! If you have suggestions or want to contribute:
 2. **Create a feature branch**:  
    ```bash
    git checkout -b feature/YourFeature
+   ```
 Commit your changes:
 
-bash
-Copiar código
+  ```bash
+
 git commit -m "Add YourFeature"
+  ```
 Push your changes:
 
-bash
-Copiar código
+```bash
 git push origin feature/YourFeature
+```
 Open a pull request:
 Go to the original repository and click "New Pull Request."
 
-📞 Contact Me
+## 📞 Contact Me
+
 You can reach me via:
 
-Email: your-email@example.com
-LinkedIn: linkedin.com/in/yourprofile
+>Email: Alexasto2000@gmail.com
+
+>LinkedIn: linkedin.com/in/ccalejandro/
