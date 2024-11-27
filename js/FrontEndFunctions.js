@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => { // Quan la pàgina s'
     }
 });
 window.onload = function() {
+    showElement('grid-container');
     setInterval(() => {
         document.getElementsByClassName('time-text')[0].innerHTML = new Date().toLocaleTimeString().substring(0,5)
     }, 1000);
@@ -81,6 +82,21 @@ function showElement(className) {
 
     return false;
 }
+function hideElement(className) {
+    var div = document.getElementsByClassName(className)[0];
+    var val = div.style.display;
+    
+    if (val !== "none") {
+            div.style.transition = "opacity 0.5s ease";
+            div.style.transitionDelay = ".25s";
+            div.style.opacity = "0";
+            setTimeout(() => {
+                div.style.display = "none";
+            }, 300);
+        }
+
+    return false;
+}
 
 function toggleNav() {
     var navScreen = document.querySelector('.nav-screen');
@@ -91,3 +107,10 @@ function toggleNav() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const startDate = new Date(2024, 9, 30);
+    const currentDate = new Date();
+    const daysPast = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+
+    document.getElementById('daysPast').innerHTML = daysPast;
+});

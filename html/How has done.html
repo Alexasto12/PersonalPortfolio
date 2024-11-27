@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Was Done</title>
+    <link rel="stylesheet" href="../styles/hHdStyle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How It Was Done</h1>
+            <button onclick="toggleStyleButton()">Change Style Mode</button>
+            <br>
+            <button onclick="window.location.href='../index.html'">Go to Home</button>
+        </header>
+        <p>This page explains the most relevant aspects of the process I followed to create the website. Additionally, it details the problems I encountered during this project.</p>
+
+        <h2>Process Followed</h2>
+        <p>The development of this website involved several key steps:</p>
+        <ul>
+            <li><strong>Planning:</strong> I started by outlining the structure and content of the website, including the sections and features I wanted to include.</li>
+            <li><strong>Design:</strong> I created wireframes and mockups to visualize the layout and design of the website. This helped in ensuring a consistent look and feel across all pages.</li>
+            <li><strong>Development:</strong> I wrote the HTML, CSS, and JavaScript code to build the website. This involved creating the layout, styling the elements, and adding interactivity.</li>
+            <li><strong>Testing:</strong> I thoroughly tested the website to ensure it worked correctly on different devices and browsers. This included checking for responsiveness, functionality, and performance.</li>
+            <li><strong>Deployment:</strong> Finally, I deployed the website to a web server, making it accessible to users online.</li>
+        </ul>
+
+        <h2>Problems Encountered</h2>
+        <p>During the development process, I encountered several challenges:</p>
+
+        <h3>1. Background Video Not Displaying</h3>
+        <p>Initially, the background video was not displaying correctly. The issue was due to the video element not being positioned correctly and other elements overlapping it. I resolved this by setting the video element to a fixed position and ensuring it had a lower z-index than other content.</p>
+
+        <h3>2. Lottie Animation Not Loading</h3>
+        <p>The Lottie animation was not loading as expected. This was caused by incorrect paths to the JSON files and the animation container not being properly sized. I fixed this by verifying the paths and adjusting the CSS to ensure the container occupied the full viewport.</p>
+
+        <h3>3. Toggle Switch Alignment</h3>
+        <p>The toggle switch for changing between light and dark modes was not aligned correctly. The issue was due to inconsistent padding and margin settings. I corrected this by standardizing the dimensions and alignment properties in the CSS.</p>
+
+        <h3>4. Grid Items Misalignment</h3>
+        <p>The grid items in the technologies section were not aligning properly. This was due to extra margins and padding in the grid container and items. I resolved this by removing unnecessary margins and ensuring the grid layout was correctly defined.</p>
+
+        <h3>5. Delayed Animation Loading</h3>
+        <p>There was a need to add a delay before destroying the current Lottie animation and loading a new one. I implemented this by using the setTimeout function to introduce a delay before calling the destroy method on the current animation.</p>
+
+        <h3>6. Consistent Styling Across Elements</h3>
+        <p>Ensuring consistent styling across different elements, such as buttons and the toggle switch, was challenging. I achieved this by defining common styles in the CSS and applying them uniformly to all relevant elements.</p>
+
+        <h2>Conclusion</h2>
+        <p>Throughout the development process, I encountered several challenges, but by systematically addressing each issue, I was able to create a functional and visually appealing portfolio website. This document serves as a record of the problems faced and the solutions implemented.</p>
+
+        <footer>
+            <p>&copy; 2024 Alejandro Cabrera Carrasco</p>
+        </footer>
+    </div>
+    <script src="../js/FrontEndFunctions.js"></script>
+</body>
+</html>

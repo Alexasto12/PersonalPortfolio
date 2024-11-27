@@ -1,0 +1,226 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Estilos para el modo claro */
+.light {
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    color: #333;
+}
+
+.light h1, .light h2 {
+    color: #333;
+}
+
+.light h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.light h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.light h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.light p {
+    margin-bottom: 10px;
+}
+
+.light ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.light ul li {
+    margin-bottom: 5px;
+}
+
+.light code {
+    background-color: #e0f7fa;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.light .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.light header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.light footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.light blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #e0f7fa;
+    border-left: 5px solid #80deea;
+    font-style: italic;
+    color: #555;
+}
+
+.light pre {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.light a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.light a:hover {
+    text-decoration: underline;
+}
+
+.light button {
+    background-color: #007BFF;
+    color: #fff;
+    
+}
+
+.light button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el modo oscuro */
+.dark {
+    background: linear-gradient(135deg, #130404, #d32f2f);
+    color: #f4f4f4;
+}
+
+.dark h1, .dark h2 {
+    color: #f4f4f4;
+}
+
+.dark h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.dark h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.dark h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.dark p {
+    margin-bottom: 10px;
+}
+
+.dark ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.dark ul li {
+    margin-bottom: 5px;
+}
+
+.dark code {
+    background-color: #555;
+    color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dark .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #160101, #d32f2f);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.dark header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dark footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.dark blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #555;
+    border-left: 5px solid #888;
+    font-style: italic;
+    color: #ddd;
+}
+
+.dark pre {
+    background-color: #222;
+    color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.dark a {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+.dark a:hover {
+    color: #FF4500;
+}
+
+.dark button {
+    background-color: #FF6347;
+    color: #fff;
+
+}
+
+.dark button:hover {
+    background-color: #FF4500;
+}
+
+.dark button:active {
+    transform: scale(0.95); /* Reduce el tamaño del botón cuando se hace clic */
+}
