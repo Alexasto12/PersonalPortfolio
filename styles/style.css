@@ -69,6 +69,7 @@ ul {
   background-repeat: repeat;
   background-position: center;
   color: #030303;
+  cursor: url('../media/Icons/cursorLight.svg'), auto;
 }
 
 .light .button-nav {
@@ -94,6 +95,10 @@ ul {
   background-repeat: repeat;
   background-size: contain;
   color: #fff;
+  cursor: url('../media/Icons/cursorDark.svg'), auto;
+  
+  
+
 }
 
 .dark .button-nav {
@@ -150,7 +155,6 @@ main {
   position: relative;
   z-index: 1;
   /* Assegura que estigui a sobre de l'animació */
-  color: white;
   text-align: center;
   padding-top: 20vh;
   font-size: 2rem;
@@ -233,18 +237,19 @@ main {
 .light .grid-item {
   display: flex;
   transition: all 0.4s ease-in-out;
-  background-color: rgba(197, 196, 196, 0.39);
+  background-color: rgba(197, 196, 196, 0.055);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
   align-items: flex-start;
   flex-direction: column;
+  color: black;
 }
 
 .dark .grid-item {
   display: flex;
   transition: all 0.4s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.39);
+  background-color: rgba(0, 0, 0, 0.575);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -264,12 +269,24 @@ main {
   /* Asegúrate de que no haya márgenes adicionales */
 }
 
-.grid-item ul li {
+.dark .grid-item ul li {
   background-color: #7003034b;
   border: 1px solid rgba(255, 255, 255, 0.075);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.911);
   border-radius: 15px;
   padding: 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /* Alinea los elementos al principio del div */
+}
+.light .grid-item ul li {
+  background-color: #13e2b557;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.911);
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
   margin: 0;
   display: flex;
   align-items: center;
@@ -490,12 +507,22 @@ main {
   color: #f1f1f1;
 }
 
-.cardAboutMe {
+.dark .cardAboutMe {
   align-items: center;
   position: relative;
   width: 90%;
   height: 100%;
   color: #ffffff;
+  overflow: visible;
+  border-radius: 20px;
+
+}
+.light .cardAboutMe {
+  align-items: center;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  color: #000000;
   overflow: visible;
   border-radius: 20px;
 
@@ -596,7 +623,7 @@ section {
 
 
 
-.cards .card {
+.dark .cards .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -605,9 +632,24 @@ section {
   height: 35em;
   width: 30em;
   border-radius: 15px;
-  color: rgba(255, 255, 255, 0.404);
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  transition: 400ms;
+  font-size: 18px;
+  transition: 300ms;
+}
+.light .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 35em;
+  width: 30em;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 18px;
+  transition: 300ms;
 }
 
 .cards .card p.tip {
@@ -632,7 +674,7 @@ section {
 .dark .form-container {
   width: 60vw;
   height: 50vh;
-  background: linear-gradient(#3d04045e, #000000cc) padding-box,
+  background: linear-gradient(#74070793, #490202cc) padding-box,
               linear-gradient(90deg, transparent 35%,#4b0d05, #a00606) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
@@ -647,6 +689,7 @@ section {
   border-radius: 16px;
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.856);
 }
 .light .form-container {
   width: 60vw;
@@ -666,6 +709,7 @@ section {
   border-radius: 16px;
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.856);
 }
 
 @keyframes gradient {
@@ -703,7 +747,14 @@ section {
   margin-bottom: 5px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 16px;
+}
+.light .form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .form-container .form-group input {
@@ -761,7 +812,7 @@ section {
   border-radius: 6px;
 }
 .light .form-container .form-submit-btn {
-  background-color: #fff;
+  background-color: #ffffff79;
   color: rgb(0, 0, 0);
   border-color: #fff;
 }
@@ -773,7 +824,7 @@ section {
 }
 
 .light .form-container .form-submit-btn:hover {
-  background-color: #313131;
+  background-color: #31313175;
   color: #00f5fd;
   border-color: #414141;
 }
@@ -802,7 +853,7 @@ section {
   margin: 0 auto;
   border-radius: 20px;
   margin-right: 4em;
-  background:linear-gradient(#3d04045e, #000000cc) padding-box,
+  background:linear-gradient(#dd060696, #660b0bcc) padding-box,
   linear-gradient(90deg, transparent 35%,#4b0d05, #a00606) border-box;
   display: flex;
   flex-direction: column;
@@ -810,9 +861,10 @@ section {
   justify-content: center;
   padding: 25px 25px;
   gap: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.856);
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
+  border: 2px solid transparent;
 }
 .light .cardSN {
   width: 50%;
@@ -828,9 +880,10 @@ section {
   justify-content: center;
   padding: 25px 25px;
   gap: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.856);
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
+  border: 2px solid transparent;
 }
 
 /* for all social containers*/
