@@ -1,7 +1,7 @@
 /* Aplicar la font a tot el document */
 html {
   height: fit-content;
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: 'Arial', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -69,7 +69,6 @@ ul {
   background-repeat: repeat;
   background-position: center;
   color: #030303;
-  cursor: url('../media/Icons/cursorLight.svg'), auto;
 }
 
 .light .button-nav {
@@ -95,10 +94,6 @@ ul {
   background-repeat: repeat;
   background-size: contain;
   color: #fff;
-  cursor: url('../media/Icons/cursorDark.svg'), auto;
-  
-  
-
 }
 
 .dark .button-nav {
